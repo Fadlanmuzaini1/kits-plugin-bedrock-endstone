@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "endstone-kits"
+version = "0.1.0"
+description = "Sistem Kits (item + command) untuk server Endstone (Minecraft Bedrock) dengan cooldown per-player, integrasi permission, dan GUI form."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Nama Anda" }
+]
+
+# Nama entry point ("kits") adalah nama project tanpa prefix "endstone-",
+# sesuai konvensi loader plugin Endstone.
+[project.entry-points."endstone"]
+kits = "endstone_kits:KitsPlugin"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/endstone_kits"]
+
+# Pastikan file non-.py (mis. config.toml default) ikut ter-bundle ke
+# dalam wheel, karena secara default packaging tools bisa saja hanya
+# menyertakan file .py.
+[tool.hatch.build]
+include = [
+    "src/endstone_kits/**/*.py",
+    "src/endstone_kits/**/*.toml",
+]
