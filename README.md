@@ -1,3 +1,8 @@
+#### (Choose your language below / Pilih bahasa dibawah)
+[![English](https://img.shields.io/badge/Language-English-blue)](README.en.md)
+[![Bahasa Indonesia](https://img.shields.io/badge/Language-Indonesia-green)](README.md)
+---
+
 # Endstone Kits
 
 Plugin sistem **Kits** untuk server Minecraft Bedrock berbasis
